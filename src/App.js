@@ -1,21 +1,26 @@
-
+import { Suspense } from 'react';
 import { Box } from '@react-three/drei';
 import { VRCanvas, DefaultXRControllers } from '@react-three/xr';
-import { Suspense } from 'react';
+
 import Building from './Building';
 
-const App = () => {
+import './App.css';
 
-    return (
-			<div className="main">
-				<VRCanvas>
-					<DefaultXRControllers />
-					<Suspense fallback={<Box />}>
-						<Building />
-					</Suspense>
-				</VRCanvas>
-			</div>
-	)
-};
+const App = () => (
+	<div className="main">
+		<VRCanvas>
+			<DefaultXRControllers />
+			
+
+			<ambientLight color="#ffeeff" position={[1, 1, 1]} />
+			<ambientLight color="#ffffff" position={[-1, 0.5, -1]} />
+
+			<Suspense fallback={<Box />}>
+				<Building />
+			</Suspense>
+
+		</VRCanvas>
+	</div>
+);
 
 export default App;
