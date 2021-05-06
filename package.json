@@ -20,7 +20,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "copyfiles -f wasm/web-ifc.wasm build/static/js",
+    "postbuild": "cpx -p wasm/web-ifc.wasm build/static/js",
+    "copy-to-docs": "cpx ./build/** ./docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
+    "cpx": "^1.5.0",
     "cross-env": "^7.0.3"
   }
 }
