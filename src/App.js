@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { useState } from 'react';
+import { VRCanvas, DefaultXRControllers } from '@react-three/xr';
+import { IFCLoader } from 'three/examples/jsm/loaders/IFCLoader';
+
+const App = () => {
+	const [ifc, setIfc] = useState();
+	
+	const handleChange = ({ target }) => {
+		const file = target.files[0];
+
+		if (!file) {
+			return;
+		}
+
+		const url = URL.createObjectURL(file);
+
+		const loader = new IFCLoader();
+		loader.load(url, geometry => setIfc(geometry));
+	};
+
+    return (
+		<div className="main">
+			<input onChange={handleChange} type="file" />
+			<VRCanvas>
+				<DefaultXRControllers />
+				{ifc}
+			</VRCanvas>
+		</div>
+	)
+};
 
 export default App;
