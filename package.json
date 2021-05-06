@@ -2,6 +2,7 @@
   "name": "react-xr-ifc-loader",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@react-three/drei": "^4.3.3",
     "@react-three/fiber": "^6.0.19",
@@ -44,6 +45,6 @@
     ]
   },
   "devDependencies": {
-    "cpx": "^1.5.0",
+    "cpx": "^1.5.0"
   }
 }
