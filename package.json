@@ -20,9 +20,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && npm run move:wasm",
-    "move:wasm": "cpx -p wasm/web-ifc.wasm build/static/js",
-    "postbuild": "git add . && git commit -m \"publish gh-pages\" && git subtree push --prefix build origin gh-pages",
+    "build": "react-scripts build",
+    "postbuild": "cpx -p wasm/web-ifc.wasm build/static/js",
+    "ghp:publish": "git reset HEAD && git add build && git commit -m \"publish gh-pages\" && git subtree push --prefix build origin gh-pages",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

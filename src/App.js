@@ -16,7 +16,7 @@ const App = () => (
 			<ambientLight color="#ffffff" position={[-1, 0.5, -1]} />
 
 			<Suspense fallback={<Box />}>
-				<Building />
+				<Building src={'small.ifc'} />
 			</Suspense>
 
 		</VRCanvas>
