@@ -1,9 +1,9 @@
 # Overview
 
 This is a small project that:
-- loads an IFC file using IFC.js
-- renders it in a React app via react-fiber-three
-- allows to view it in virtual reality with react-xr
+- loads an IFC file using [IFC.js](https://agviegas.github.io/ifcjs-docs/#/)
+- renders it in a React app via [react-three-fiber](https://github.com/pmndrs/react-three-fiber)
+- allows to view it in virtual reality with [react-xr](https://github.com/pmndrs/react-xr)
 
 Demo available [here](https://florianchauvel.github.io/react-xr-ifc-loader/)
 
