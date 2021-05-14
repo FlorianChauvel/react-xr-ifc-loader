@@ -5,7 +5,7 @@ This is a small project that:
 - renders it in a React app via react-fiber-three
 - allows to view it in virtual reality with react-xr
 
-Demo available (here)[https://florianchauvel.github.io/react-xr-ifc-loader/]
+Demo available [here](https://florianchauvel.github.io/react-xr-ifc-loader/)
 
 # ⚠ Disclaimer ⚠
 There are a few problems at the moment:
